@@ -7,7 +7,7 @@ Module N Auth. Module to authenticate &amp; authorize for Laravel
 ### Add package:
 To start using the authentication package from NAuth, you need to initialize a submodule for your Laravel project.
 ```git
-git clone https://gitlab.tgl-cloud.com/0000_tgl/23_tgl_codebase/laravel-module-acl.git packages/acl_modules
+git clone https://github.com/ChauCongTu/laravel-module-nauth.git packages/nauth_module
 ```
 
 ### Update composer.json in main project
