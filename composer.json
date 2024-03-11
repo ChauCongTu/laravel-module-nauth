@@ -1,0 +1,30 @@
+{
+    "name": "cqn/nauth_module",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "CQN\\NAuthModule\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NhonCQ",
+            "email": "quenhon2002@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/passport": "^11.10",
+        "laravel/socialite": "^5.12",
+        "spatie/laravel-permission": "^6.4"
+    },
+    "require-dev": {
+        "spatie/laravel-ignition": "^2.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CQN\\NAuthModule\\AclProvider"
+            ]
+        }
+    }
+}

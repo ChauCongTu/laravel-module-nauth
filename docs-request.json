@@ -1,0 +1,76 @@
+{
+    "name": "Laravel Module NAuth",
+    "author": "NhonCQ",
+    "version": "1.0",
+    "requests": {
+        "REGISTER": {
+            "url": "/api/v1/register",
+            "method": "POST",
+            "description": "Register a new account",
+            "body": {
+                "email": "required|email",
+                "password": "required|min:6|confirmed",
+                "password_confirmation": "required|min:6",
+                "google_id": "nullable",
+                "username": "required|min:5|max:255",
+                "full_name": "required|min:5|max:255",
+                "avatar": "nullable",
+                "is_active": "nullable"
+            },
+            "output": {
+                "success": "boolean",
+                "message": "string",
+                "data": "user|null",
+                "token": "string|null"
+            }
+        },
+        "LOGIN": {
+            "url": "/api/v1/login",
+            "method": "POST",
+            "description": "Login with email, password",
+            "body": {
+                "email": "required|email",
+                "password": "required|min:6"
+            },
+            "output": {
+                "success": "boolean",
+                "message": "string",
+                "data": "user|null",
+                "token": "string|null"
+            }
+        },
+        "GOOGLE LOGIN": {
+            "url": "/api/v1/login/google",
+            "method": "POST",
+            "description": "Login with gmail",
+            "body": {},
+            "output": {
+                "url": "string"
+            }
+        },
+        "HANDLE GOOGLE LOGIN": {
+            "url": "/api/v1/login/google/callback",
+            "method": "GET",
+            "description": "Login with gmail",
+            "params": "Google return string",
+            "body": {},
+            "output": {
+                "success": "boolean",
+                "firstLogin": "boolean",
+                "token": "string|null",
+                "data": "user|null"
+            }
+        },
+        "LOGOUT": {
+            "url": "/api/v1/logout",
+            "method": "POST",
+            "description": "Sign out",
+            "bearer": "token",
+            "body": {},
+            "output": {
+                "success": "boolean",
+                "message": "string"
+            }
+        }
+    }
+}
