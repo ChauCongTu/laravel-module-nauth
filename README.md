@@ -89,3 +89,4 @@ class Authenticate extends Middleware
 ```
 
 ## How To Use
+See: [Api Document](https://github.com/ChauCongTu/laravel-module-nauth/blob/main/docs-request.json)
